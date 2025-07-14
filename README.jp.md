@@ -1,323 +1,216 @@
-<p align='center'>
-<img src='./build/icon.png' width="150" height="150" alt="DeepChat AI アシスタントアイコン" />
-</p>
+<div align="center">
 
-<h1 align="center">DeepChat - 強力なオープンソースマルチモデルAIチャットプラットフォーム</h1>
+![Intro](./docs/assets/xpack/intro-bg.png)
 
-<p align="center">DeepChatは、複数のクラウドおよびローカル大規模言語モデルをサポートする機能豊富なオープンソースAIチャットプラットフォームです。強力な検索強化機能とツール呼び出し機能を提供します。</p>
 
+</div>
 <p align="center">
-  <a href="https://github.com/ThinkInAIXYZ/deepchat/stargazers"><img src="https://img.shields.io/github/stars/ThinkInAIXYZ/deepchat" alt="Stars Badge"/></a>
-  <a href="https://github.com/ThinkInAIXYZ/deepchat/network/members"><img src="https://img.shields.io/github/forks/ThinkInAIXYZ/deepchat" alt="Forks Badge"/></a>
-  <a href="https://github.com/ThinkInAIXYZ/deepchat/pulls"><img src="https://img.shields.io/github/issues-pr/ThinkInAIXYZ/deepchat" alt="Pull Requests Badge"/></a>
-  <a href="https://github.com/ThinkInAIXYZ/deepchat/issues"><img src="https://img.shields.io/github/issues/ThinkInAIXYZ/deepchat" alt="Issues Badge"/></a>
   <a href="https://github.com/ThinkInAIXYZ/deepchat/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ThinkInAIXYZ/deepchat" alt="License Badge"/></a>
-  <a href="https://deepwiki.com/ThinkInAIXYZ/deepchat"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
 </p>
 
 <div align="center">
   <a href="./README.zh.md">中文</a> / <a href="./README.md">English</a> / <a href="./README.jp.md">日本語</a>
 </div>
 
-## 📑 目次
+## はじめに
 
-- [📑 目次](#-目次)
-- [🚀 プロジェクト紹介](#-プロジェクト紹介)
-- [💡 なぜDeepChatを選ぶのか](#-なぜdeepchatを選ぶのか)
-- [🔥 主な機能](#-主な機能)
-- [🤖 サポートされているモデルプロバイダー](#-サポートされているモデルプロバイダー)
-  - [OpenAI/Gemini/Anthropic API形式の任意のモデルプロバイダーと互換性あり](#openaigeminianthropic-api形式の任意のモデルプロバイダーと互換性あり)
-- [🔍 ユースケース](#-ユースケース)
-- [📦 クイックスタート](#-クイックスタート)
-  - [ダウンロードとインストール](#ダウンロードとインストール)
-  - [モデルの設定](#モデルの設定)
-  - [会話を開始](#会話を開始)
-- [💻 開発ガイド](#-開発ガイド)
-  - [依存関係のインストール](#依存関係のインストール)
-  - [開発を開始](#開発を開始)
-  - [ビルド](#ビルド)
-- [👥 コミュニティと貢献](#-コミュニティと貢献)
-- [⭐ スター履歴](#-スター履歴)
-- [👨‍💻 貢献者](#-貢献者)
-- [📃 ライセンス](#-ライセンス)
+このリポジトリは、**DeepChat**と**XPack.AI**の強力な統合を紹介し、世界中の数千の即座に使用可能なツールに接続することで、AIアシスタントの機能を拡張する方法を実演しています。複数のクラウドおよびローカル大規模言語モデルをサポートする機能豊富なオープンソースAIチャットプラットフォームである[DeepChat](https://deepchat.thinkinai.xyz/)の堅牢な基盤の上に構築されたこのプロジェクトは、XPackの広範なサービスマーケットプレイスを活用するためのModel Context Protocol（MCP）サービスの設定の実用的な例を提供します。
 
-## 🚀 プロジェクト紹介
+## DeepChatとは？
 
-DeepChatは、様々な大規模言語モデルと対話するための統一されたインターフェースを提供する強力なオープンソースAIチャットプラットフォームです。OpenAI、Gemini、AnthropicなどのクラウドAPIや、ローカルにデプロイされたOllamaモデルを使用する場合でも、DeepChatはスムーズなユーザー体験を提供します。
+[DeepChat](https://deepchat.thinkinai.xyz/)は、様々な大規模言語モデルと対話するための統一されたインターフェースを提供する強力なオープンソースAIチャットプラットフォームです。OpenAI、Gemini、AnthropicなどのクラウドAPIや、ローカルにデプロイされたOllamaモデルを使用する場合でも、DeepChatは高度な機能を備えたスムーズなユーザー体験を提供します。
 
-クロスプラットフォームAIアシスタントアプリケーションとして、DeepChatは基本的なチャット機能をサポートするだけでなく、検索強化、ツール呼び出し、マルチモーダル対話などの高度な機能も提供し、AI機能をより身近で効率的なものにします。
-
-<table align="center">
-  <tr>
-    <td align="center" style="padding: 10px;">
-      <img src='https://github.com/user-attachments/assets/49b32cf8-f114-485f-886e-27e4ac273afa' alt="DeepChat ライトモード" width="400"/>
-      <br/>
-    </td>
-    <td align="center" style="padding: 10px;">
-      <img src='https://github.com/user-attachments/assets/1a540ef5-7598-4476-ab32-36cbad306484' alt="DeepChat ダークモード" width="400"/>
-      <br/>
-    </td>
-  </tr>
-</table>
-
-## 💡 なぜDeepChatを選ぶのか
-
-他のAIツールと比較して、DeepChatは以下のようなユニークな利点を提供します：
+**主な機能：**
 
 - **統一されたマルチモデル管理**: 1つのアプリケーションでほぼすべての主要なLLMをサポートし、複数のアプリを切り替える必要がありません
 - **シームレスなローカルモデル統合**: 組み込みのOllamaサポートにより、コマンドライン操作なしでローカルモデルを管理・使用できます
 - **高度なツール呼び出し**: 組み込みのMCPサポートにより、追加設定なしでコード実行、ウェブアクセス、その他のツールを利用可能です
-- **強力な検索強化**: 複数の検索エンジンをサポートし、AIの応答をより正確でタイムリーにします。非標準のウェブ検索パラダイムを提供し、迅速なカスタマイズが可能です
+- **強力な検索強化**: 複数の検索エンジンをサポートし、AIの応答をより正確でタイムリーにします
 - **プライバシー重視**: ローカルデータストレージとネットワークプロキシのサポートにより、情報漏洩のリスクを軽減します
 - **ビジネスフレンドリー**: Apache License 2.0の下でオープンソース化され、商用・個人利用の両方に適しています
 
-## 🔥 主な機能
+## XPack.AIとは？
 
-- 🌐 **複数のクラウドLLMプロバイダーサポート**: DeepSeek、OpenAI、SiliconFlow、Grok、Gemini、Anthropicなど
-- 🏠 **ローカルモデルデプロイメントサポート**:
-  - 包括的な管理機能を備えた統合Ollama
-  - コマンドライン操作なしでOllamaモデルのダウンロード、デプロイメント、実行を制御・管理
-- 🚀 **豊富で使いやすいチャット機能**
-  - 業界最高レベルの [CodeMirror](https://codemirror.net/) を基盤としたコードブロックレンダリングを含む完全なMarkdownレンダリング
-  - マルチウィンドウ + マルチタブアーキテクチャで、あらゆる次元でマルチセッション並列動作をサポート。ブラウザのように大規模モデルを使用し、ノンブロッキング体験により優れた効率を実現
-  - MCP統合後、トークン消費を大幅に節約する多様な結果表示のためのアーティファクトレンダリングをサポート
-  - メッセージは複数のバリエーションを生成するためのリトライをサポート。会話は自由にフォーク可能で、常に適切な思考の流れを確保
-  - 画像、Mermaidダイアグラム、その他のマルチモーダルコンテンツのレンダリングをサポート。GPT-4o、Gemini、Grokのテキストから画像生成機能をサポート
-  - 検索結果などの外部情報ソースをコンテンツ内でハイライト表示
-- 🔍 **強力な検索強化機能**
-  - MCPモードで博查搜索、Brave Searchなどの主要な検索APIを組み込み、モデルが検索のタイミングを賢く判断
-  - ユーザーのウェブブラウジングをシミュレートすることで、Google、Bing、Baidu、Sogou公式アカウント検索などの主要検索エンジンをサポート
-  - あらゆる検索エンジンの読み取りをサポート。検索アシスタントモデルを設定するだけで、内部ネットワーク、APIなしのエンジン、垂直ドメイン検索エンジンなど、様々な情報ソースをモデルに接続可能
-- 🔧 **優れたMCP（Model Context Protocol）サポート**
-  - MCPプロトコルのResources/Prompts/Tools三大コア機能を完全サポート
-  - セマンティックワークフローをサポートし、タスクの意味とコンテキストを理解することで、より複雑でインテリジェントな自動化を実現します。
-  - 非常にユーザーフレンドリーな設定インターフェース
-  - 美しく明確なツール呼び出し表示
-  - ツールパラメータとリターンデータの自動フォーマット機能を備えた詳細なツール呼び出しデバッグウィンドウ
-  - 組み込みNode.js実行環境。npx/node類似のサービスは追加設定不要で開箱即用
-  - StreamableHTTP/SSE/Stdioプロトコル トランスポートをサポート
-  - コード実行、ウェブ情報取得、ファイル操作などの組み込みユーティリティを備えたinMemoryサービスをサポート。二次インストールなしで一般的なユースケースに対応
-  - 組み込みMCPサービスを通じて、視覚モデル機能を任意のモデルで使用可能な普遍的な機能に変換
-- 💻 **マルチプラットフォームサポート**: Windows、macOS、Linux
-- 🎨 **美しく使いやすいインターフェース**、ユーザー志向の設計、丁寧なライト/ダークモードテーマ
-- 🔗 **豊富なDeepLinkサポート**: リンクを通じて会話を開始し、他のアプリケーションとシームレスに統合。MCPサービスのワンクリックインストールもサポートし、シンプルさとスピードを実現
-- 🚑 **セキュリティ重視の設計**: チャットデータと設定データに暗号化インターフェースとコード難読化機能を備える
-- 🛡️ **プライバシー保護**: スクリーン投影の非表示、ネットワークプロキシなどのプライバシー保護方法をサポートし、情報漏洩のリスクを軽減
-- 💰 **ビジネスフレンドリー**:
-  - オープンソースを採用し、Apache License 2.0ライセンスに基づく、企業利用も安心
-  - 企業統合では最小限の設定コード変更のみで予約された暗号化難読化セキュリティ機能を使用可能
-  - コード構造が明確で、モデルプロバイダーもMCPサービスも高度に分離されており、最小コストで自由にカスタマイズ可能
-  - 合理的なアーキテクチャ、データ相互作用とUI動作の分離により、Electronの機能を十分に活用し、単純なウェブラッパーを拒否、優れたパフォーマンス
+[XPack.AI](https://xpack.ai/)は、統一されたModel Context Protocol（MCP）を通じて、AIエージェントがグローバルサービスとツールの広大なエコシステムに接続できるプラットフォームです。XPackを使用すると、AIエージェントの機能を簡単に拡張し、金融、物流、メッセージング、その他の様々なドメインにわたる多様なAPIとサービスに、1分以内でアクセスできます。
 
-## 🤖 サポートされているモデルプロバイダー
+## DeepChat + XPack: AIとグローバルサービスの橋渡し
 
-<table>
-  <tr align="center">
-    <td>
-      <img src="./src/renderer/src/assets/llm-icons/ollama.svg" width="50" height="50" alt="Ollama Icon"><br/>
-      <a href="https://ollama.com">Ollama</a>
-    </td>
-    <td>
-      <img src="./src/renderer/src/assets/llm-icons/deepseek-color.svg" width="50" height="50" alt="Deepseek Icon"><br/>
-      <a href="https://deepseek.com/">Deepseek</a>
-    </td>
-    <td>
-      <img src="./src/renderer/src/assets/llm-icons/siliconcloud.svg" width="50" height="50" alt="SiliconFlow Icon"><br/>
-      <a href="https://www.siliconflow.cn/">SiliconFlow</a>
-    </td>
-    <td>
-      <img src="./src/renderer/src/assets/llm-icons/alibabacloud-color.svg" width="50" height="50" alt="DashScope Icon"><br/>
-      <a href="https://www.aliyun.com/product/bailian">DashScope</a>
-    </td>
-  </tr>
-  <tr align="center">
-    <td>
-      <img src="./src/renderer/src/assets/llm-icons/doubao-color.svg" width="50" height="50" alt="Doubao Icon"><br/>
-      <a href="https://console.volcengine.com/ark/">Doubao</a>
-    </td>
-    <td>
-      <img src="./src/renderer/src/assets/llm-icons/minimax-color.svg" width="50" height="50" alt="MiniMax Icon"><br/>
-      <a href="https://platform.minimaxi.com/">MiniMax</a>
-    </td>
-    <td>
-      <img src="./src/renderer/src/assets/llm-icons/fireworks-color.svg" width="50" height="50" alt="Fireworks Icon"><br/>
-      <a href="https://fireworks.ai/">Fireworks</a>
-    </td>
-    <td>
-      <img src="./src/renderer/src/assets/llm-icons/ppio-color.svg" width="50" height="50" alt="PPIO Icon"><br/>
-      <a href="https://ppinfra.com/">PPIO</a>
-    </td>
-  </tr>
-  <tr align="center">
-    <td>
-      <img src="./src/renderer/src/assets/llm-icons/openai.svg" width="50" height="50" alt="OpenAI Icon"><br/>
-      <a href="https://openai.com/">OpenAI</a>
-    </td>
-    <td>
-      <img src="./src/renderer/src/assets/llm-icons/gemini-color.svg" width="50" height="50" alt="Gemini Icon"><br/>
-      <a href="https://gemini.google.com/">Gemini</a>
-    </td>
-    <td>
-      <img src="./src/renderer/src/assets/llm-icons/github.svg" width="50" height="50" alt="GitHub Models Icon"><br/>
-      <a href="https://github.com/marketplace/models">GitHub Models</a>
-    </td>
-    <td>
-      <img src="./src/renderer/src/assets/llm-icons/moonshot.svg" width="50" height="50" alt="Moonshot Icon"><br/>
-      <a href="https://moonshot.ai/">Moonshot</a>
-    </td>
-  </tr>
-  <tr align="center">
-    <td>
-      <img src="./src/renderer/src/assets/llm-icons/openrouter.svg" width="50" height="50" alt="OpenRouter Icon"><br/>
-      <a href="https://openrouter.ai/">OpenRouter</a>
-    </td>
-    <td>
-      <img src="./src/renderer/src/assets/llm-icons/azure-color.svg" width="50" height="50" alt="Azure OpenAI Icon"><br/>
-      <a href="https://azure.microsoft.com/en-us/products/ai-services/openai-service">Azure OpenAI</a>
-    </td>
-    <td>
-      <img src="./src/renderer/src/assets/llm-icons/qiniu.svg" width="50" height="50" alt="Qiniu Icon"><br/>
-      <a href="https://www.qiniu.com/products/ai-token-api">Qiniu</a>
-    </td>
-    <td>
-      <img src="./src/renderer/src/assets/llm-icons/grok.svg" width="50" height="50" alt="Grok Icon"><br/>
-      <a href="https://x.ai/">Grok</a>
-    </td>
-  </tr>
-  <tr align="center">
-    <td>
-      <img src="./src/renderer/src/assets/llm-icons/zhipu-color.svg" width="50" height="50" alt="Zhipu Icon"><br/>
-      <a href="https://open.bigmodel.cn/">Zhipu</a>
-    </td>
-    <td>
-      <img src="./src/renderer/src/assets/llm-icons/lmstudio.svg" width="50" height="50" alt="LM Studio Icon"><br/>
-      <a href="https://lmstudio.ai/">LM Studio</a>
-    </td>
-    <td>
-      <img src="./src/renderer/src/assets/llm-icons/aihubmix.png" width="50" height="50" alt="AIHubMix Icon"><br/>
-      <a href="https://aihubmix.com/">AIHubMix</a>
-    </td>
-    <td>
-      <img src="./src/renderer/src/assets/llm-icons/hunyuan-color.svg" width="50" height="50" alt="Hunyuan Icon"><br/>
-      <a href="https://cloud.tencent.com/product/hunyuan">Hunyuan</a>
-    </td>
-  </tr>
-  <tr align="center">
-    <td>
-      <img src="./src/renderer/src/assets/llm-icons/302ai.svg" width="50" height="50" alt="302.AI Icon"><br/>
-      <a href="https://302.ai/">302.AI</a>
-    </td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
+このプロジェクトは、XPackをMCPサーバーとして利用するためのDeepChatの設定方法を実演することに焦点を当てています。これにより、あなたのDeepChatインスタンスはXPackの豊富なツールコレクションに即座にアクセスでき、以下のことが可能になります：
 
+- **多様なサービスへのアクセス**: 金融データから画像処理まで、これまで手の届かなかった機能を統合
+- **開発の加速**: 事前構築されたツールを活用してAI駆動ソリューションを迅速にプロトタイプ化・構築
+- **ワークフローの合理化**: DeepChatのインテリジェンスとXPackの外部サービス統合を組み合わせて複雑なタスクを自動化
+- **簡単なスケーリング**: カスタム統合コードを書くことなく、数千のグローバルサービスに接続
+
+### アーキテクチャ概要
+
+```
+┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
+│   User Input    │    │    DeepChat      │    │   XPack.AI      │
+│   (Web/Desktop) │◄──►│                  │◄──►│   Marketplace   │
+└─────────────────┘    │  ┌─────────────┐ │    │                 │
+                       │  │ MCP Client  │ │    │  ┌─────────────┐│
+┌─────────────────┐    │  │             │ │    │  │1000+ Global ││
+│  Local Tools    │◄──►│  │ • XPack     │ │    │  │Services     ││
+│  & Resources    │    │  │ • Local     │ │    │  │• Finance    ││
+└─────────────────┘    │  │ • Custom    │ │    │  │• Social     ││
+                       │  └─────────────┘ │    │  │• Data       ││
+┌─────────────────┐    │  ┌─────────────┐ │    │  │• AI/ML      ││
+│  Multi-Model    │◄──►│  │   Chat      │ │    │  │• Utilities  ││
+│  Support        │    │  │ Interface   │ │    │  └─────────────┘│
+└─────────────────┘    │  └─────────────┘ │    └─────────────────┘
+                       └──────────────────┘
+
+```
+
+**主要コンポーネント：**
+
+- **DeepChat Core**: 高度な機能を備えたマルチモデルAIチャットプラットフォーム
+- **MCP Client**: 外部ツールプロバイダーに接続するための標準化されたインターフェース
+- **XPack MCP Server**: 統一APIを通じて1000以上のグローバルサービスへのゲートウェイ
+- **Local Tools**: コード実行、ファイルシステムアクセスなどの組み込み機能
+- **Multi-Model System**: 様々なクラウドおよびローカルLLMプロバイダーのサポート
+
+## インストール
+
+### DeepChatのダウンロードとインストール
+
+まず、DeepChatがインストールされていることを確認してください。[GitHub Releasesページ](https://github.com/ThinkInAIXYZ/deepchat/releases)からお使いのオペレーティングシステム用の最新バージョンをダウンロードしてください。
+
+**📥 クイックダウンロード：**
+
+- **Windows**: `.exe`インストーラーをダウンロード
+- **macOS**: `.dmg`インストールファイルをダウンロード
+- **Linux**: `.AppImage`または`.deb`インストールファイルをダウンロード
+
+ダウンロード後、インストーラーを実行し、画面の指示に従ってインストールを完了してください。
+
+<table align="center">
+  <tr>
+    <td align="center" style="padding: 10px;">
+      <img src='https://github.com/user-attachments/assets/5df4ed93-e4b5-4430-a1e3-bd9beba79e64' alt="DeepChat ライトモード" width="400"/>
+      <br/>
+    </td>
+    <td align="center" style="padding: 10px;">
+      <img src='https://github.com/user-attachments/assets/79be4873-f80e-43a9-bfac-e1efb246ea99' alt="DeepChat ダークモード" width="400"/>
+      <br/>
+    </td>
+  </tr>
 </table>
 
-### OpenAI/Gemini/Anthropic API形式の任意のモデルプロバイダーと互換性あり
+_開発、プロジェクト構造、アーキテクチャに関するより詳細なガイドについては、[開発者ガイド](./docs/developer-guide.md)をご覧ください。_
 
-## 🔍 ユースケース
+### XPack統合
 
-DeepChatは様々なAIアプリケーションシナリオに適しています：
+DeepChatをXPackに接続するには、MCPサーバーを設定する必要があります。これにより、DeepChatはXPackを通じて利用可能なツールを発見し、活用できるようになります。
 
-- **日常アシスタント**: 質問への回答、提案の提供、文章作成の支援
-- **開発支援**: コード生成、デバッグ、技術的問題の解決
-- **学習ツール**: 概念の説明、知識の探求、学習ガイダンス
-- **コンテンツ作成**: コピーライティング、クリエイティブなインスピレーション、コンテンツの最適化
-- **データ分析**: データの解釈、チャート生成、レポート作成
+#### 1. XPack認証キーの取得：
 
-## 📦 クイックスタート
+- [XPack.AI](https://xpack.ai/)にアクセスしてアカウントを作成
+- XPackダッシュボードから認証キーを生成
 
-### ダウンロードとインストール
+![XPack.ai Dashboard](./docs/assets/xpack/xpack-dashboard.png)
 
-[GitHub Releases](https://github.com/ThinkInAIXYZ/deepchat/releases)ページからお使いのシステム用の最新バージョンをダウンロードしてください：
+#### 2. DeepChatでXPack MCPを設定
 
-- Windows: `.exe`インストールファイル
-- macOS: `.dmg`インストールファイル
-- Linux: `.AppImage`または`.deb`インストールファイル
+##### オプションA: DeepChat設定UI経由（推奨）
 
-### モデルの設定
+設定UIを通じてMCPを設定：
 
-1. DeepChatアプリケーションを起動
-2. 設定アイコンをクリック
-3. "モデルプロバイダー"タブを選択
-4. APIキーを追加するか、ローカルOllamaを設定
+- DeepChatアプリケーションを開く
+- 設定ページに移動（⚙️ Setting）
+- **MCP Setting**タブに切り替えて「Add」ボタンをクリック
+- **Add Server**モーダルで、テキストエリアにxpack mcp設定を貼り付け：
 
-### 会話を開始
+  ```json
+  {
+    "mcpServers": {
+      "xpack-mcp-market": {
+        "type": "sse",
+        "url": "https://api.xpack.ai/v1/mcp?apikey={YOUR_XPACK_AUTH_KEY}"
+      }
+    }
+  }
+  ```
+![mcp config](./docs/assets/ui-mcp-config-1.png)
 
-1. "+"ボタンをクリックして新しい会話を作成
-2. 使用したいモデルを選択
-3. AIアシスタントとの対話を開始
+##### オプションB: 手動設定
 
-## 💻 開発ガイド
+手動設定を希望する場合は、DeepChatのDeepLink機能を使用してワンクリックMCPインストールも可能です：
 
-[貢献ガイドライン](./CONTRIBUTING.md)をお読みください。
-
-WindowsとLinuxはGitHub Actionによってパッケージングされます。
-Mac関連の署名とパッケージングについては、[Mac リリースガイド](https://github.com/ThinkInAIXYZ/deepchat/wiki/Mac-Release-Guide)を参照してください。
-
-### 依存関係のインストール
-
-```bash
-$ pnpm install
-$ pnpm run installRuntime
-# エラーが出た場合: No module named 'distutils'
-$ pip install setuptools
+```
+deepChat://mcp/install?code={base64Encode(JSON.stringify(jsonConfig))}
 ```
 
-* For Windows: 非管理者ユーザーがシンボリックリンクやハードリンクを作成できるようにするには、設定で「開発者モード」を有効にするか、管理者アカウントを使用してください。それ以外の場合、pnpm の操作は失敗します。
+⚠️ `YOUR_XPACK_AUTH_KEY`をダッシュボードから取得した実際のXPack認証キーに置き換えてください。
 
-### 開発を開始
+詳細なMCP設定手順については、[ユーザーガイド](./docs/user-guide.md)をご覧ください。
 
-```bash
-$ pnpm run dev
+#### 3. MCPでDeepChatを実行
+
+設定が完了すると、XPack MCPサーバーに自動的に接続し、利用可能なツールを発見します。
+
+### 設定の確認
+
+XPack MCP統合が正しく動作していることを確認するには：
+1. DeepChat MCP設定パネルでスイッチを切り替えてMCPサーバーを有効にします。
+2. ツールリストを確認：
+    - 接続が成功すると、利用可能なツールが下に表示されます。
+    - 任意のツールをクリックして、より詳細な情報を表示できます。
+    - ツールリストと詳細なツール情報の存在は、サービス接続が正常で動作していることを示します。
+
+![verify configuration](./docs/assets/ui-mcp-config-2.png)
+
+正しく設定されていれば、DeepChatは利用可能なXPackツールを表示し、様々なタスクでそれらを使用できるようになります。
+
+#### 使用方法
+
+その後、DeepChatでアイデアやプロンプトを入力すると、XPackのツールを活用してタスクを実行します。XPackサービスを特に利用したい場合は、リクエストで「use XPack」と言及してください。
+
+## 人気のタスク
+
+このセクションでは、様々なタスクでDeepChatとXPackを活用する実用的な例を提供します。
+
+### YouTubeコメントの分析と改善提案
+
+YouTube動画のコメントを簡単に分析して、視聴者の感情を理解し、コンテンツ改善の提案を得ることができます。
+
+```
+xpackを使用して、このYouTube動画のコメントを読み取ってください：https://www.youtube.com/watch?v=LPZh9BOjkQs、フィードバックの感情を分析し、動画の改善点を推奨してください。
 ```
 
-### ビルド
+![Analyze YouTube comments Image](./docs/assets/xpack/demo-youtube-analysis.png)
 
-```bash
-# Windowsの場合
-$ pnpm run build:win
+### 現在の金価格と影響要因
 
-# macOSの場合
-$ pnpm run build:mac
+最新の金価格を迅速に確認し、将来のトレンドに影響を与える可能性のある主要な要因を発見できます。
 
-# Linuxの場合
-$ pnpm run build:linux
-
-# アーキテクチャを指定してパッケージング
-$ pnpm run build:win:x64
-$ pnpm run build:win:arm64
-$ pnpm run build:mac:x64
-$ pnpm run build:mac:arm64
-$ pnpm run build:linux:x64
-$ pnpm run build:linux:arm64
+```
+xpackを使用して現在の金のリアルタイム価格を調べ、将来の価格に影響を与える可能性のある具体的な要因を提供してください。
 ```
 
-## 👥 コミュニティと貢献
+![Current Gold Price Image](./docs/assets/xpack/demo-gold-monitor.png)
 
-DeepChatはアクティブなオープンソースコミュニティプロジェクトであり、様々な形での貢献を歓迎します：
+### カスタム画像の生成
 
-- 🐛 [問題を報告する](https://github.com/ThinkInAIXYZ/deepchat/issues)
-- 💡 [機能の提案を提出する](https://github.com/ThinkInAIXYZ/deepchat/issues)
-- 🔧 [コードの改善を提出する](https://github.com/ThinkInAIXYZ/deepchat/pulls)
-- 📚 [ドキュメントを改善する](https://github.com/ThinkInAIXYZ/deepchat/wiki)
-- 🌍 [翻訳を手伝う](https://github.com/ThinkInAIXYZ/deepchat/tree/main/locales)
+XPackを通じてAI画像生成ツールを使用して、カスタム画像を簡単に作成できます。
 
-プロジェクトへの参加方法について詳しく知るには、[貢献ガイドライン](./CONTRIBUTING.md)をご確認ください。
+```
+xpackで走っている子犬の画像を生成してください
+```
 
-## ⭐ スター履歴
+![Generated image of a cute puppy running in a park](./docs/assets/xpack/demo-running-puppy.png)
 
-[![Star History Chart](https://api.star-history.com/svg?repos=ThinkInAIXYZ/deepchat&type=Timeline)](https://www.star-history.com/#ThinkInAIXYZ/deepchat&Timeline)
+### ドッグフード広告ポスターの生成
 
-## 👨‍💻 貢献者
+簡単にインスピレーションを検索し、ホットなプロモーション要素を組み合わせたカスタムドッグフード広告ポスターを生成できます。
 
-deepchatへの貢献をご検討いただきありがとうございます！貢献ガイドは[貢献ガイドライン](./CONTRIBUTING.md)でご確認いただけます。
+```
+ドッグフードのホットプロモーションポスターについて画像を検索し、ホット要素を組み合わせたドッグフード広告ポスターを生成してください
+```
 
-<a href="https://github.com/ThinkInAIXYZ/deepchat/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ThinkInAIXYZ/deepchat" alt="DeepChatプロジェクト貢献者" />
-</a>
+![Dog Food Hot Promotion Poster Example](./docs/assets/xpack/demo-dogfood-poster.png)
 
-## 📃 ライセンス
+---
 
-[LICENSE](./LICENSE)
+**DeepChatをグローバルサービスでスーパーチャージする準備はできましたか？** 今すぐXPack.AIを始めて、AI駆動アシスタンスの全ポテンシャルを解き放ちましょう！

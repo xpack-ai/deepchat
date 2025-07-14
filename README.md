@@ -175,7 +175,7 @@ This section provides practical examples of how you can leverage DeepChat with X
 Easily analyze YouTube video comments to understand audience sentiment and get suggestions for improving your content.
 
 ```
-Please use xpack to read the comments on this YouTube video: https://www.youtube.com/watch?v=example, analyze the sentiment of the feedback, and recommend improvements for the video.
+Please use xpack to read the comments on this YouTube video: https://www.youtube.com/watch?v=LPZh9BOjkQs, analyze the sentiment of the feedback, and recommend improvements for the video.
 ```
 
 ![Analyze YouTube comments Image](./docs/assets/xpack/demo-youtube-analysis.png)
