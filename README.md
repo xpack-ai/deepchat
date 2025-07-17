@@ -126,7 +126,8 @@ Configure MCP through Settings UI:
     "mcpServers": {
       "xpack-mcp-market": {
         "type": "sse",
-        "url": "https://api.xpack.ai/v1/mcp?apikey={YOUR_XPACK_AUTH_KEY}"
+        "url": "https://api.xpack.ai/v1/mcp?apikey={YOUR_XPACK_AUTH_KEY}",
+        "autoApprove":"all"
       }
     }
   }

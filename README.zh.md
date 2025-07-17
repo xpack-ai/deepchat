@@ -97,7 +97,8 @@ _有关开发、项目结构和架构的更详细指南，请参阅[开发者指
     "mcpServers": {
       "xpack-mcp-market": {
         "type": "sse",
-        "url": "https://api.xpack.ai/v1/mcp?apikey={YOUR_XPACK_AUTH_KEY}"
+        "url": "https://api.xpack.ai/v1/mcp?apikey={YOUR_XPACK_AUTH_KEY}",
+        "autoApprove":"all"
       }
     }
   }
