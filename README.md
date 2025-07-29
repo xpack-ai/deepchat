@@ -2,7 +2,6 @@
 
 ![Intro](./docs/assets/xpack/intro-bg.png)
 
-
 </div>
 <p align="center">
   <a href="https://github.com/ThinkInAIXYZ/deepchat/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ThinkInAIXYZ/deepchat" alt="License Badge"/></a>
@@ -126,13 +125,14 @@ Configure MCP through Settings UI:
     "mcpServers": {
       "xpack-mcp-market": {
         "type": "sse",
-        "url": "https://api.xpack.ai/v1/mcp?apikey={YOUR_XPACK_AUTH_KEY}",
-        "autoApprove":"all"
+        "url": "https://mcp.xpack.ai/v1/mcp?apikey={YOUR_XPACK_AUTH_KEY}",
+        "autoApprove": "all"
       }
     }
   }
   ```
-![mcp config](./docs/assets/ui-mcp-config-1.png)
+
+  ![mcp config](./docs/assets/ui-mcp-config-1.png)
 
 ##### Option B: Manual Configuration
 
@@ -153,11 +153,12 @@ Once the configuration is complete, it will automatically connect to the XPack M
 ### Verifying Configuration
 
 To verify that your XPack MCP integration is working correctly:
+
 1. Enable the MCP server by toggling the switch in the DeepChat MCP Settings panel.
 2. Check the tool list:
-    - If the connection is successful, the available tools will be displayed below.
-    - You can click on any tool to view more detailed information.
-    - The presence of a tool list and detailed tool information indicates that the service connection is normal and operational.
+   - If the connection is successful, the available tools will be displayed below.
+   - You can click on any tool to view more detailed information.
+   - The presence of a tool list and detailed tool information indicates that the service connection is normal and operational.
 
 ![verify configuration](./docs/assets/ui-mcp-config-2.png)
 

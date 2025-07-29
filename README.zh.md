@@ -2,7 +2,6 @@
 
 ![Intro](./docs/assets/xpack/intro-bg.png)
 
-
 </div>
 <p align="center">
   <a href="https://github.com/ThinkInAIXYZ/deepchat/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ThinkInAIXYZ/deepchat" alt="License Badge"/></a>
@@ -97,13 +96,14 @@ _有关开发、项目结构和架构的更详细指南，请参阅[开发者指
     "mcpServers": {
       "xpack-mcp-market": {
         "type": "sse",
-        "url": "https://api.xpack.ai/v1/mcp?apikey={YOUR_XPACK_AUTH_KEY}",
-        "autoApprove":"all"
+        "url": "https://mcp.xpack.ai/v1/mcp?apikey={YOUR_XPACK_AUTH_KEY}",
+        "autoApprove": "all"
       }
     }
   }
   ```
-![mcp config](./docs/assets/ui-mcp-config-1.png)
+
+  ![mcp config](./docs/assets/ui-mcp-config-1.png)
 
 ##### 选项B：手动配置
 
@@ -124,11 +124,12 @@ deepChat://mcp/install?code={base64Encode(JSON.stringify(jsonConfig))}
 ### 验证配置
 
 要验证您的XPack MCP集成是否正常工作：
+
 1. 通过在DeepChat MCP设置面板中切换开关来启用MCP服务器。
 2. 检查工具列表：
-    - 如果连接成功，可用工具将显示在下方。
-    - 您可以点击任何工具查看更详细的信息。
-    - 工具列表和详细工具信息的存在表明服务连接正常且可操作。
+   - 如果连接成功，可用工具将显示在下方。
+   - 您可以点击任何工具查看更详细的信息。
+   - 工具列表和详细工具信息的存在表明服务连接正常且可操作。
 
 ![verify configuration](./docs/assets/ui-mcp-config-2.png)
 

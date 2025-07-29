@@ -2,7 +2,6 @@
 
 ![Intro](./docs/assets/xpack/intro-bg.png)
 
-
 </div>
 <p align="center">
   <a href="https://github.com/ThinkInAIXYZ/deepchat/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ThinkInAIXYZ/deepchat" alt="License Badge"/></a>
@@ -127,13 +126,14 @@ DeepChatをXPackに接続するには、MCPサーバーを設定する必要が�
     "mcpServers": {
       "xpack-mcp-market": {
         "type": "sse",
-        "url": "https://api.xpack.ai/v1/mcp?apikey={YOUR_XPACK_AUTH_KEY}",
-        "autoApprove":"all"
+        "url": "https://mcp.xpack.ai/v1/mcp?apikey={YOUR_XPACK_AUTH_KEY}",
+        "autoApprove": "all"
       }
     }
   }
   ```
-![mcp config](./docs/assets/ui-mcp-config-1.png)
+
+  ![mcp config](./docs/assets/ui-mcp-config-1.png)
 
 ##### オプションB: 手動設定
 
@@ -154,11 +154,12 @@ deepChat://mcp/install?code={base64Encode(JSON.stringify(jsonConfig))}
 ### 設定の確認
 
 XPack MCP統合が正しく動作していることを確認するには：
+
 1. DeepChat MCP設定パネルでスイッチを切り替えてMCPサーバーを有効にします。
 2. ツールリストを確認：
-    - 接続が成功すると、利用可能なツールが下に表示されます。
-    - 任意のツールをクリックして、より詳細な情報を表示できます。
-    - ツールリストと詳細なツール情報の存在は、サービス接続が正常で動作していることを示します。
+   - 接続が成功すると、利用可能なツールが下に表示されます。
+   - 任意のツールをクリックして、より詳細な情報を表示できます。
+   - ツールリストと詳細なツール情報の存在は、サービス接続が正常で動作していることを示します。
 
 ![verify configuration](./docs/assets/ui-mcp-config-2.png)
 
